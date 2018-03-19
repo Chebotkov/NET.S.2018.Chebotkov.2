@@ -1,0 +1,8 @@
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\bin\Debug\FindNextBiggerNumberLib.dll
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\bin\Debug\FindNextBiggerNumberLib.pdb
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\bin\Debug\SortingLib.dll
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\bin\Debug\SortingLib.pdb
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\obj\Debug\FindNextBiggerNumberLib.csprojResolveAssemblyReference.cache
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\obj\Debug\FindNextBiggerNumberLib.csproj.CoreCompileInputs.cache
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\obj\Debug\FindNextBiggerNumberLib.dll
+D:\Courses\NET.S.2018.Chebotkov.2\FindNextBiggerNumberLib\obj\Debug\FindNextBiggerNumberLib.pdb

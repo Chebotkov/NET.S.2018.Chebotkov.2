@@ -3,3 +3,4 @@ D:\Courses\NET.S.2018.Chebotkov.2\Filter\bin\Debug\Filter.pdb
 D:\Courses\NET.S.2018.Chebotkov.2\Filter\obj\Debug\Filter.csproj.CoreCompileInputs.cache
 D:\Courses\NET.S.2018.Chebotkov.2\Filter\obj\Debug\Filter.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter\obj\Debug\Filter.pdb
+D:\Courses\NET.S.2018.Chebotkov.2\Filter\obj\Debug\Filter.csprojResolveAssemblyReference.cache

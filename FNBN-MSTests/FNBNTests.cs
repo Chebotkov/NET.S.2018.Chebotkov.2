@@ -144,5 +144,22 @@ namespace FNBN_MSTests
             //Assert
             Assert.AreEqual(expectedResult, result);
         }
+
+        /// <summary>
+        /// Test method
+        /// </summary>
+        [TestMethod]
+        public void FNBN_1554333333_minus1()
+        {
+            //Arange          
+            int enteredNumber = 1554333333;
+            int expectedResult = -1;
+
+            //Act
+            int result = FindNextBiggerNumberLib.FNBN.FindNextBiggerNumber(enteredNumber);
+
+            //Assert
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

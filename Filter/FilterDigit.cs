@@ -22,7 +22,7 @@ namespace Filter
         {
             if (digit > 9 || digit < 0)
             {
-                throw new System.ArgumentOutOfRangeException();
+                throw new System.ArgumentOutOfRangeException("It's not a digit.");
             }
 
             List<int> temp = new List<int>();
@@ -49,7 +49,7 @@ namespace Filter
         {
             if (number < 0)
             {
-                number *= -1;
+                number = -number;
             }
 
             while (number > 0)

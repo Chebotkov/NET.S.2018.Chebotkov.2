@@ -15,13 +15,12 @@ namespace FindNextBiggerNumberLib
         /// <param name="number">Number</param>
         /// <returns>"-1" if argument is out of range
         /// and int number if it was correct</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when received negative number</exception>
         public static int FindNextBiggerNumber(int number)
         {
             if (number <= 0 || number > Int32.MaxValue)
             {
-                throw new ArgumentOutOfRangeException();
-                //return -1;
+                throw new ArgumentOutOfRangeException("Invalid value. Positive integer number was expected.");
             }
 
             List<int> array = new List<int>();
@@ -32,14 +31,7 @@ namespace FindNextBiggerNumberLib
                 number /= 10;
             }
 
-            try
-            {
-                return GetNubmer(array.ToArray());
-            }
-            catch (OverflowException)
-            {
-                return -1;
-            }
+            return GetNubmer(array.ToArray());
         }
 
         /// <summary>
@@ -50,15 +42,14 @@ namespace FindNextBiggerNumberLib
         /// <param name="time">Program execution time</param>
         /// <returns>"-1" if argument is out of range
         /// and int number if it was correct</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when received negative number</exception>
         public static int FindNextBiggerNumberWithTimeByOut(int number, out int time)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
             sw.Start();
             if (number <= 0 || number > Int32.MaxValue)
             {
-                throw new ArgumentOutOfRangeException();
-                //return -1;
+                throw new ArgumentOutOfRangeException("Invalid value. Positive integer number was expected.");
             }
 
             List<int> array = new List<int>();
@@ -71,55 +62,8 @@ namespace FindNextBiggerNumberLib
 
             sw.Stop();
             time = (int)sw.ElapsedMilliseconds;
-
-            try
-            {
-                return GetNubmer(array.ToArray());
-            }
-            catch (OverflowException)
-            {
-                return -1;
-            }
-        }
-
-        /// <summary>
-        /// This method is find the nearest biggest number which consists of digits of received number
-        /// and measures program execution time
-        /// </summary>
-        /// <param name="number">Number</param>
-        /// <param name="time">Program execution time</param>
-        /// <returns>"-1" if argument is out of range
-        /// and int number if it was correct</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public static int FindNextBiggerNumberWithTimeByRef(int number, ref int time)
-        {
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-            sw.Start();
-            if (number <= 0 || number > Int32.MaxValue)
-            {
-                throw new ArgumentOutOfRangeException();
-                //return -1;
-            }
-
-            List<int> array = new List<int>();
-
-            while (number > 0)
-            {
-                array.Insert(0, number % 10);
-                number /= 10;
-            }
-
-            sw.Stop();
-            time = (int)sw.ElapsedMilliseconds;
-
-            try
-            {
-                return GetNubmer(array.ToArray());
-            }
-            catch (OverflowException)
-            {
-                return -1;
-            }
+            
+            return GetNubmer(array.ToArray());
         }
 
         /// <summary>
@@ -128,15 +72,14 @@ namespace FindNextBiggerNumberLib
         /// </summary>
         /// <param name="number">Number</param>
         /// <returns>Returns cortege {int; double;} which contains result and time of execution</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when received negative number</exception>
         public static Tuple<int, double> FindNextBiggerNumberWithTime(int number)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
             sw.Start();
             if (number <= 0 || number > Int32.MaxValue)
             {
-                throw new ArgumentOutOfRangeException();
-                //return -1;
+                throw new ArgumentOutOfRangeException("Invalid value. Positive integer number was expected.");
             }
 
             List<int> array = new List<int>();
@@ -148,15 +91,8 @@ namespace FindNextBiggerNumberLib
             }
 
             sw.Stop();
-
-            try
-            {
-                return Tuple.Create(GetNubmer(array.ToArray()), sw.ElapsedMilliseconds / 100.0);
-            }
-            catch (OverflowException)
-            {
-                return Tuple.Create(-1, 0d);
-            }
+           
+            return Tuple.Create(GetNubmer(array.ToArray()), sw.ElapsedMilliseconds / 100.0);
         }
         #endregion
 
@@ -174,7 +110,7 @@ namespace FindNextBiggerNumberLib
             {
                 if (array[i] > array[i - 1])
                 {
-                    ReplaceDigits(array, i, i - 1);
+                    ReplaceDigits(ref array[i], ref array[i - 1]);
                     if (i != array.Length - 1)
                     {
                         SotringLib.Sorting.QuickSort(array, i, array.Length - 1);
@@ -196,15 +132,15 @@ namespace FindNextBiggerNumberLib
         {
             string number;
             number = String.Concat(array);
-            return Convert.ToInt32(number);
+
+            return Convert.ToInt64(number) > (long)Int32.MaxValue ? -1 : Convert.ToInt32(number);
 
             /*int number=0, increment = 1;
-            for (int i=0; i<array.Length, i++)
+            for (int i=array.Length-1; i>0; i--, increment *= 10)
             {
                 number += array[i] * increment;
-                increment *= 10;
             }
-            return number;*/
+            return (long)(number + array[0] * increment) > Int32.MaxValue ? -1 : number += array[0] * increment;*/
         }
 
         /// <summary>
@@ -213,11 +149,11 @@ namespace FindNextBiggerNumberLib
         /// <param name="array">Array</param>
         /// <param name="index1">First index</param>
         /// <param name="index2">Second index</param>
-        private static void ReplaceDigits(int[] array, int index1, int index2)
+        private static void ReplaceDigits(ref int firstNumber, ref int secondNumber)
         {
-            int temp = array[index1];
-            array[index1] = array[index2];
-            array[index2] = temp;
+            int temp = firstNumber;
+            firstNumber = secondNumber;
+            secondNumber = temp;
         }
         #endregion
     }

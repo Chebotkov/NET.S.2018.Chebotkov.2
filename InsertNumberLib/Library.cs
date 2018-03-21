@@ -16,13 +16,13 @@ namespace InsertNumberLib
         /// <param name="secondNumber">Second number</param>
         /// <param name="firstIndex">First index</param>
         /// <param name="secondIndex">Second index</param>
-        /// <exception cref="IndexOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when received wrong range of indices</exception>
         /// <returns></returns>
         public static int InsertNumber(int firstNumber, int secondNumber, int firstIndex, int secondIndex)
         {
             if (secondIndex < firstIndex)
             {
-                throw new IndexOutOfRangeException();
+                throw new IndexOutOfRangeException("Wrong range of indices.");
             }
 
             int[] firstNumArray = GetBinaryRepresentationOfNumber(firstNumber);
@@ -72,9 +72,9 @@ namespace InsertNumberLib
         private static int GetNumberFromBinaryArray(int[] array)
         {
             int number = 0;
-            for (int i = array.Length - 1, power = 0; i >= 0; i--, power++)
+            for (int i = array.Length - 1, power = 1; i >= 0; i--, power *= 2)
             {
-                number += array[i] * (int)Math.Pow(2, power);
+                number += array[i] * power;
             }
 
             return number;

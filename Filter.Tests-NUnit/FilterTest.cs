@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Filter.Tests;
+using NUnit.Framework;
 
 namespace Filter.Tests_NUnit
 {
@@ -18,7 +19,8 @@ namespace Filter.Tests_NUnit
         [TestCase(new int[] { }, new int[] { }, 1)]
         public void FilterDigitFuncTests(int[] initialArray, int[] expectedArray, int digit)
         {
-            int[] result = FilterDigit.FilterDigitFunc(initialArray, digit);
+            IPredicate predicate = new PredicateDemo(digit);
+            int[] result = FilterDigit.FilterDigitFunc(initialArray, predicate);
 
             CollectionAssert.AreEqual(expectedArray, result);
         }

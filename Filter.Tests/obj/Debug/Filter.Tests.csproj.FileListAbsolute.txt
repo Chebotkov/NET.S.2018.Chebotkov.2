@@ -1,9 +1,6 @@
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Filter.Tests.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Filter.Tests.pdb
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\Filter.dll
@@ -16,3 +13,4 @@ D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\obj\Debug\Filter.Tests.csprojReso
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\obj\Debug\Filter.Tests.csproj.CoreCompileInputs.cache
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\obj\Debug\Filter.Tests.dll
 D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\obj\Debug\Filter.Tests.pdb
+D:\Courses\NET.S.2018.Chebotkov.2\Filter.Tests\bin\Debug\PredicateDemo.cs

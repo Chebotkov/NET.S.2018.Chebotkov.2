@@ -1,9 +1,6 @@
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\FNBN-MSTests.dll
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\FNBN-MSTests.pdb
 D:\Courses\NET.S.2018.Chebotkov.2\FNBN-MSTests\bin\Debug\FindNextBiggerNumberLib.dll

@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Filter;
+using Filter.Tests;
 
 namespace DDT.Filter.Tests
 {
@@ -30,7 +31,8 @@ namespace DDT.Filter.Tests
             int[] initialArray = ParseToArray.GetArray(TestContext.DataRow["InitialArray"].ToString());
             int[] expectedArray = ParseToArray.GetArray(TestContext.DataRow["ExpectedArray"].ToString());
             int digit = Convert.ToInt32(TestContext.DataRow["Digit"]);
-            int[] result = FilterDigit.FilterDigitFunc(initialArray, digit);
+            IPredicate predicate = new PredicateDemo(digit);
+            int[] result = FilterDigit.FilterDigitFunc(initialArray, predicate);
             CollectionAssert.AreEqual(expectedArray, result);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Filter
 {
@@ -10,59 +11,36 @@ namespace Filter
     {
         #region public
         /// <summary>
-        /// Method gets array of integers and digit. Then it 
-        /// scans received array for numbers which contains specified digit
-        /// and puts them in new array.
+        /// Method gets array of integers. Then it 
+        /// scans received array for numbers by predicate
+        /// and puts them into a new array.
         /// </summary>
-        /// <param name="array">Array</param>
-        /// <param name="digit">Filtration digit</param>
-        /// <returns>Return new Array</returns>
-        /// <exception cref="System.ArgumentOutOfRangeException">Throws when variable "digit" isn't a digit</exception>
-        public static int[] FilterDigitFunc(int[] array, int digit)
+        /// <param name="array">Array.</param>
+        /// <param name="predicate">The way of choosing.</param>
+        /// <returns>Return new Array.</returns>
+        /// <exception cref="System.ArgumentNullException">Throws when array or predicate is null.</exception>
+        public static int[] FilterDigitFunc(int[] array, IPredicate predicate)
         {
-            if (digit > 9 || digit < 0)
+            if (ReferenceEquals(array, null))
             {
-                throw new System.ArgumentOutOfRangeException("It's not a digit.");
+                throw new ArgumentNullException("Array can't be null");
+            }
+
+            if (ReferenceEquals(predicate, null))
+            {
+                throw new ArgumentNullException("Predicate can't be null");
             }
 
             List<int> temp = new List<int>();
             for (int i = 0; i < array.Length; i++)
             {
-                if (IsNumberContainsDigit(array[i], digit))
+                if (predicate.Predicate(array[i]))
                 {
                     temp.Add(array[i]);
                 }
             }
 
             return temp.ToArray<int>();
-        }
-        #endregion
-
-        #region private
-        /// <summary>
-        /// Method checks if number contains specified digit.
-        /// </summary>
-        /// <param name="number">Entered number</param>
-        /// <param name="digit">Filtration digit</param>
-        /// <returns>Return true if number contains specified digit and false if it isn't. </returns>
-        private static bool IsNumberContainsDigit(int number, int digit)
-        {
-            if (number < 0)
-            {
-                number = -number;
-            }
-
-            while (number > 0)
-            {
-                if (number % 10 == digit)
-                {
-                    return true;
-                }
-
-                number /= 10;
-            }
-
-            return false;
         }
         #endregion
     }

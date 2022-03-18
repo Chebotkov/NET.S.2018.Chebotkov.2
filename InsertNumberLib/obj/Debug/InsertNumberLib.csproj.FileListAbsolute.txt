@@ -1,6 +1,0 @@
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\bin\Debug\InsertNumberLib.dll
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\bin\Debug\InsertNumberLib.pdb
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\obj\Debug\InsertNumberLib.csproj.CoreCompileInputs.cache
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\obj\Debug\InsertNumberLib.dll
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\obj\Debug\InsertNumberLib.pdb
-D:\Courses\NET.S.2018.Chebotkov.2\InsertNumberLib\obj\Debug\InsertNumberLib.csprojResolveAssemblyReference.cache
